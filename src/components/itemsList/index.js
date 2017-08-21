@@ -14,43 +14,51 @@ class ItemsList extends Component {
         this.state = {
             itemsToShow: [
                 {
+                    id: 1,
                     name: 'Мономер для акриловой пудры 58мл',
                     category: 'Жидкости',
                     price: '90',
                     image: acrilyc
                 },
                 {
+                    id: 2,
                     name: 'Лампа красная 48ватт (гель, акрилл, шекллак)',
                     category: 'снтрументы',
                     price: '250',
                     image: lamp
                 }, {
+                    id: 3,
                     name: 'Хамелеоны микс размеров. Упаковка 1440шт',
                     category: 'Декор',
                     price: '100',
                     image: chameleons
                 },
                 {
+                    id: 4,
                     name: 'Набор для покраски Estel (миска, кисть, пресс-ключ)',
                     category: 'Инструменты, фрезеры',
                     price: '100'
                 },
                 {
+                    id: 5,
                     name: 'Кристалы пикси',
                     category: 'Стразы, стекло',
                     price: '90'
                 },
                 {
+                    id: 6,
                     name: 'Конфетти',
                     category: 'Декор, конфетти',
                     price: '25',
                     discountPrice: '10'
                 }, {
+                    id: 7,
                     name: 'Типсы на лак',
                     category: 'Типсы',
                     price: '1'
                 },
                 {
+                    id: 8,
                     name: 'Набор для покраски Estel (миска, кисть, пресс-ключ)',
                     category: 'Инструменты, фрезеры',
                     price: '100'
@@ -69,11 +77,13 @@ class ItemsList extends Component {
         </div>
     }
 
-    renderCart() {
-        return <i className="material-icons cart">add_shopping_cart</i>;
-    }
+    renderCart = (item) => {
+        const { addItemToCart } = this.props;
+        return <i className="material-icons cart" onClick={() => addItemToCart(item)}>add_shopping_cart</i>;
+    };
 
     render() {
+
         return (
             <div className="items-container">
                 {map(this.state.itemsToShow, (item, i) =>
