@@ -1,0 +1,46 @@
+.card-container {
+    height: 270px;
+    width: 150px;
+    margin: 8px;
+    will-change: width;
+
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+
+    font-family: Roboto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 2px;
+}
+.card-image {
+    height: 65%;
+    flex: 1 1 auto;
+}
+
+.card-title {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px;
+    font-size: calc(5vw - 0.1rem);
+    font-weight: 300;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: underline;
+    color: #7B1FA2;
+}
+
+.left-align {
+    justify-content: start;
+    align-items: flex-start;
+}
+
+.bottom-container {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 8px;
+}

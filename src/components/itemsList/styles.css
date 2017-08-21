@@ -1,0 +1,24 @@
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart {
+    color: #7B1FA2;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 18px;
+}
+
+.previous-price {
+    text-decoration: line-through;
+    color: #7B1FA2;
+    font-weight: 500;
+    padding-right: 4px;
+}

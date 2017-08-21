@@ -1,0 +1,22 @@
+{
+  "name": "blueberry",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.2",
+    "react-swipeable": "^4.0.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "roboto-fontface": "^0.7.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
