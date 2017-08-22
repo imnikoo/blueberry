@@ -1,26 +1,36 @@
 import React, {Component} from 'react';
-import CartItemsList from './CartItemsList';
+import map from 'lodash/map';
+
+import CartItem from './CartItem';
 import DeliveryPayment from './DeliveryPayment'
 import OrderResult from './OrderResult'
 
+import './cartContainerStyles.css';
+
 export default class extends Component {
-    constructor(props) {
-        super(props);
+   componentDidMount = () => {
+      this.props.changeTitle('Ваш заказ');
+   };
 
-        this.state = {
-            cartItemsList: props.cartItemsList
-        };
-    }
+   render() {
+      const { cartItemsList, increaseQuantity, decreaseQuantity} = this.props;
 
-    render() {
-        const { cartItemsList } = this.state;
-
-        return (
-            <div className="cart-container">
-                <CartItemsList items={cartItemsList} />
-                <DeliveryPayment/>
-                <OrderResult/>
+      return (
+         <div className="cart-container">
+            <div className="list-header">
+               <span className="header-image"></span>
+               <span className="header-name">Название</span>
+               <span className="header-price">Количество</span>
             </div>
-        );
-    }
+            <div className='cart-items'>
+               {map(cartItemsList, (item, i) =>
+                  <CartItem key={i} cartItem={item} increaseQuantity={increaseQuantity}
+                            decreaseQuantity={decreaseQuantity}/>
+               )}
+            </div>
+            <DeliveryPayment/>
+            <OrderResult/>
+         </div>
+      );
+   }
 }

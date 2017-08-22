@@ -3,8 +3,12 @@
     flex-wrap: wrap;
 }
 
-.cart {
+.to-cart {
     color: #7B1FA2;
+}
+
+.from-cart {
+    color: #E57373;
 }
 
 .price-container {

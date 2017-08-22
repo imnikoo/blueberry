@@ -1,0 +1,21 @@
+.list-header {
+    display: flex;
+    padding: 16px;
+    color: rgb(67, 67, 67);
+    font-family: Roboto;
+}
+
+.header-image {
+    width: 48px;
+}
+.header-name {
+    flex: 6;
+    text-align: left;
+    font-weight: bold;
+    padding: 0 16px 0 16px;
+}
+.header-price {
+    flex: 1;
+    font-weight: bold;
+    text-align: left;
+}

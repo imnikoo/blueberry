@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import map from 'lodash/map';
+import classnames from 'classnames';
 import Card from '../Card/card';
 import img from '../offers/top_sells.jpg';
 import './styles.css';
@@ -67,6 +68,10 @@ class ItemsList extends Component {
         }
     }
 
+    componentDidMount = () => {
+      this.props.changeTitle('Товар');
+    };
+
     renderPrice(item) {
         if (!item.discountPrice) {
             return <span className="price">{item.price}₴</span>
@@ -79,7 +84,15 @@ class ItemsList extends Component {
 
     renderCart = (item) => {
         const { addItemToCart } = this.props;
-        return <i className="material-icons cart" onClick={() => addItemToCart(item)}>add_shopping_cart</i>;
+        const isItemInCart = this.props.isItemInCart(item);
+        const cartClasses = classnames({
+           'material-icons' : true,
+           'to-cart': !isItemInCart,
+           'from-cart': isItemInCart
+        });
+        return <i className={cartClasses} onClick={() => addItemToCart(item)}>
+           { isItemInCart ? `remove_shopping_cart` : `add_shopping_cart` }
+        </i>;
     };
 
     render() {
