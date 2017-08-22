@@ -17,6 +17,7 @@ class CartItem extends Component {
                   <span>{cartItem.quantity}</span>
                   <i className="material-icons less" onClick={() => decreaseQuantity(cartItem)}>keyboard_arrow_down</i>
                </div>
+               <i className="material-icons">clear</i>
             </div>
         );
     }
