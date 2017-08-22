@@ -1,5 +1,5 @@
 .card-container {
-    height: 270px;
+    height: 295px;
     width: 150px;
     margin: 8px;
     will-change: width;
@@ -13,7 +13,7 @@
     border-radius: 2px;
 }
 .card-image {
-    height: 65%;
+    height: 62%;
     flex: 1 1 auto;
 }
 
@@ -42,5 +42,5 @@
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid rgba(0,0,0,.1);
-    padding: 8px;
+    padding: 16px;
 }

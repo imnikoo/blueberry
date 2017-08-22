@@ -4,6 +4,7 @@ import map from 'lodash/map';
 import CartItem from './CartItem';
 import DeliveryPayment from './DeliveryPayment'
 import OrderResult from './OrderResult'
+import OrderInfo from './OrderInfo'
 
 import './cartContainerStyles.css';
 
@@ -28,6 +29,7 @@ export default class extends Component {
                             decreaseQuantity={decreaseQuantity}/>
                )}
             </div>
+             <OrderInfo />
             <DeliveryPayment/>
             <OrderResult/>
          </div>

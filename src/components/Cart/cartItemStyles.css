@@ -5,7 +5,7 @@
 }
 
 .cart-item {
-    padding: 16px;
+    padding: 0 16px 0 16px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     color: rgb(67, 67, 67);
     text-align: left;
@@ -43,4 +43,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.more, .less {
+    padding: 8px;
+}
+.remove-item {
+    opacity: 0.5;
+    color: #F44336;
 }
